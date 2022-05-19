@@ -1,0 +1,442 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    margin:0px;
+    padding:0px;
+    overflow: hidden;
+}
+/*LOGO INTRO*/
+
+header{
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 80px;
+}
+header h4{
+    position: absolute;
+    left: 10%;
+    bottom: 1rem;
+    font-size: 1.6rem;
+} 
+.intro{
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+   transition: 1s ease;
+}
+.logo-header{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: white;
+    font-family: 'Alfa Slab One', cursive;
+}
+.logo{
+    position:relative;
+    display: inline-block;
+    bottom: -20px;
+    opacity: 0;
+}
+.logo.active{
+    bottom: 0;
+    opacity: 1;
+    transition: ease-in-out 0.5s;
+}
+.logo.fade{
+bottom: 150px;
+opacity: 0;
+transition: ease-in-out 0.5s;
+}
+
+/* INDEX PAGGE*/
+.container{
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    display:grid;
+   height:100%;
+    grid-template-columns:0.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 4.5fr 2.2fr 0.8fr;
+    grid-template-areas:"nav main main main"
+                         "nav main main main"
+                          "nav  main main main"
+                          "footer footer footer footer";
+                    
+                   
+}
+span{
+    display: none;
+}
+span.text-in{
+display: block;
+animation: textIn .5s ease;
+
+}
+span.text-out{
+    animation: textOut .5s ease;
+    }
+@keyframes textIn{
+  0% {
+transform:translateY(100%);
+    }
+   100%  {
+        transform:translateY(0%);
+            }
+}
+@keyframes textOut{
+    0% {
+  transform:translateY(0%);
+      }
+     100%  {
+          transform:translateY(-100%);
+              }
+  }
+h1{
+    margin-top:7em;
+        font-family: 'Times New Roman', serif;
+    
+}
+#btn-click{
+    background-color:transparent;
+    cursor: pointer;
+    color:white;
+    border: 1px solid green;
+    min-width:200px;
+    min-height:50px ;
+    
+}
+#btn-click:hover{
+    background-color: green;
+    transition: 2s ease;
+        }
+
+nav{
+    background-color:black;
+    grid-area: nav;
+    text-align: center;
+    
+}
+
+main{
+    background-image:url('page/IMG_7271.jpg');
+        position:center;
+    background-size:cover;
+    grid-area:main;
+    padding-top: 20%;
+    animation: animate;
+        animation-duration: 4s;
+        display: flex;
+        flex-wrap: wrap;
+        background-size: fill;
+        
+  
+}
+    
+@keyframes animate {
+  0%{ background-image:url('page/IMG_7271.jpg'); }
+ 
+25%{ background-image:url('page/IMG_7272.jpg');  }  
+}
+
+#setno{
+    box-shadow: -0px 0px 0px;
+    border-radius: 0px; 
+}
+
+footer{
+    background-color: black;
+    grid-area: footer;
+ 
+}
+h5{
+    margin-top: 1px;
+}
+
+nav ul{
+    list-style-type:none;
+    text-decoration:none;
+
+}
+nav li{
+    text-decoration:none;
+    display:inline;
+    font-size:1.3em;
+   
+}
+nav a:link{
+    border: 1px solid green;
+    text-decoration: none;
+    display: block;
+  min-width:80%;
+  color:white;
+    margin-top:15%;
+ 
+}
+nav a:visited{
+    color: red;
+}
+nav a:hover{
+    background-color: green;
+    border: 1px green solid;
+    transition:2s ease;
+    color:white;
+    
+}
+#menu{
+    background-color: transparent;
+    width: 15%;
+    padding-left:1%;
+   word-spacing: 1em;
+   margin-top:0px;
+   overflow: hidden;
+  
+}
+
+#started{
+    background-color:transparent;
+    color:white;
+    border:1px green solid;
+    width:150px;
+    height:50px;
+    border-radius: 3px;
+    
+}
+#started:hover{
+    background-color:green;
+    transition:2s ease-out;
+    border:1px black solid;
+    color:white;
+    width:180px;
+}
+/* FOR MOBILE DEVICE ONLY*/
+   @media only screen and (max-width:550px){
+    .container{
+        overflow-y: scroll;
+        scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        display:grid;
+        height:100%;
+        grid-template-columns:1fr;
+        grid-template-rows: 0.2fr 4.5fr 6.2fr;
+        grid-template-areas:"nav"
+                            "main" 
+                            "main" 
+                              "footer";                  
+    }
+    
+    #btn-click{
+        background-color:transparent;
+        cursor: pointer;
+        color:white;
+        border: 1px solid green;
+        min-width:150px;
+        min-height:50px ;
+        
+    }
+    #btn-click:hover{
+background-color: green;
+transition: 2s ease;
+    }
+    nav{
+        background-color: rgb(0, 0, 0);
+        grid-area: nav;
+        text-align:left;
+        word-spacing:5px;
+      height:5em;
+      padding-left: 20px;
+    border-bottom: 1px solid green;
+    }
+  
+   
+  
+    main{
+        background-image:url('page/IMG_7271.jpg');
+        grid-area: main;
+        position:center;
+        padding-top: 0%;
+        animation: example;
+        animation-duration: 4s;
+       background-size: fill;
+        
+        
+        
+    }
+    @keyframes example {
+      0%{ background-image:url('page/IMG_7271.jpg'); }
+  
+    25%{ background-image:url('page/IMG_7272.jpg');  }  
+    }
+    footer{
+        grid-area: footer;
+        height:5em;
+        background-color: black;
+    }
+    nav ul{
+        list-style-type:none;
+        text-decoration:none;
+       
+    }
+    nav li{
+        text-decoration:none;
+        display:inline;
+        font-size: 1.4em;
+       
+
+
+        
+    }
+    nav a:link{
+        text-decoration: none;
+        display: block;
+      width:100%;
+      color:white;
+        float: left;
+        margin-top: 10px;
+     
+    }
+    nav a:hover{
+        
+        border: 1px green solid;
+        transition:2s ease;
+        color:white;
+        
+        
+    }
+    #menu{
+        background-color: rgb(0, 0, 0);
+        width: 35%;
+        padding-left:1%;
+       word-spacing: 1em;
+       margin-top:0px;
+       overflow: hidden;
+       text-align: center;
+       
+      
+       
+      
+    }
+    h1{
+        font-family: 'Times New Roman', serif;
+    }
+    a{
+        text-decoration: none;
+    }
+    
+   }
+#preloader{
+    background:white url('page/1_CsJ05WEGfunYMLGfsT2sXA.gif') no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index:100;
+    background-size: 60%;
+}
+   @media only screen and (max-width:812px){
+   
+    main{
+        background-image:url('page/IMG_7271.jpg');
+        grid-area: main;
+        position:center;
+        padding-top: 0.3em;
+        animation: example;
+        animation-duration: 4s;
+        
+    }
+    nav a:link{
+        text-decoration: none;
+        display: block;
+      min-width:80%;
+      color:white;
+        margin-top:15%;
+     
+    }
+
+   }
+
+   /*SECOND PAGE, MAIN PAGE*/
+   
+
+  
+   @media only screen and (max-width:550px){
+    .container1{
+        display:grid;
+        height:100%;
+        grid-template-columns:1fr;
+        grid-template-rows: 0.2fr 4.5fr 6.2fr;
+        grid-template-areas:"nav"
+                            "contain1" 
+                            "contain1" 
+                            "contain1"
+                                            
+    }
+    #preloader{
+        background:white url('page/1_CsJ05WEGfunYMLGfsT2sXA.gif') no-repeat center;
+        height: 100vh;
+        width: 100%;
+        position:fixed;
+        z-index:100;
+        background-size: 60%;
+    }
+   
+    nav{
+        background-color: rgb(0, 0, 0);
+        grid-area: nav;
+        text-align:left;
+        word-spacing:5px;
+      height:5em;
+      padding-left: 20px;
+      
+       
+    }
+  
+    .contain1{
+        display: grid;
+       background-color: rgb(250, 244, 244);
+        grid-area: contain1;
+        position:center;
+        overflow-y: scroll;
+        gap:0.7em; 
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:"insider insider2"
+        
+    }
+   
+   #insider{
+grid-area: insider;
+background-color: rgb(249, 253, 249);
+text-align: center;
+padding-top: 1em;
+margin-top: 2px;
+
+   }
+   img{
+     border-radius:15px;  
+   }
+   #insider2{
+    grid-area: insider2;
+    background-color:rgb(248, 248, 250);
+    text-align: center;
+    padding-top: 1em;
+   
+
+} 
+    #menu{
+        background-color: rgb(0, 0, 0);
+        width: 35%;
+        padding-left:1%;
+       word-spacing: 1em;
+       margin-top:0px;
+       overflow: hidden;  
+       text-align: center;
+    }
+    h1{
+        font-family: 'Times New Roman', serif;
+    }
+   }

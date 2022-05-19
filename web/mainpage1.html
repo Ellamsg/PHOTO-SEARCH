@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/3b9e2cc044.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Monoton&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+
+
+.container1{
+    display:grid;
+    height:100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 0.2fr 4.5fr 6.2fr;
+    grid-template-areas:"nav"
+                        "contain1" 
+                        "contain1" 
+                        "contain1";
+                                        
+}
+#preloader{
+    background:white url('page/1_CsJ05WEGfunYMLGfsT2sXA.gif') no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index:100;
+    background-size: 60%;
+}
+a{
+  text-decoration: none;
+  font-family: 'Bebas Neue', cursive;
+}
+nav{
+    background-color: rgb(0, 0, 0);
+    grid-area: nav;
+    text-align:left;
+    word-spacing:5px;
+  height:5em;
+  padding-left: 20px;
+  border-bottom: 1px solid green;
+  
+   
+}
+
+.contain234{
+    display: grid;
+   background-color: white;
+    grid-area: contain1;
+    position:center;
+    overflow-y: scroll;
+    gap:0.7em; 
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:"insider insider2 ";
+    
+}
+
+#insider{
+grid-area: insider;
+background-color: white;
+text-align: center;
+padding-top: 1em;
+padding-left: 0.5em;
+}
+img{
+ border-radius:15px;  
+}
+#menu{
+ text-align: center;
+ background-color:black;
+ 
+}
+#insider2{
+grid-area: insider2;
+background-color:white;
+text-align: center;
+padding-top: 1em;
+padding-right: 0.5em;
+
+} 
+h1{
+    font-family: 'Times New Roman', serif;
+}
+i{
+ float:left ;
+
+font-size: 1.4em;
+}
+img{
+  object-fit:contain ;
+  background-color: rgb(8, 0, 0);
+  
+}
+#text{
+  float: right;
+margin-right:10px;
+width:85%;
+margin-top: 22px;
+  height: 37px;
+border: 2px solid rgb(37, 173, 3);
+color: rgb(32, 9, 9);
+border-radius: 15px;
+}
+@media only screen and (max-width:550px){
+  #text{
+  float: right;
+margin-right:10px;
+width:62%;
+margin-top: 22px;
+height:35px;
+color: black;
+border: 2px solid rgb(37, 173, 3);
+
+
+  
+}
+}
+</style>
+</head>
+
+<body>
+  <div id="preloader">  </div>
+<div class="container1">
+<nav>
+  <button  onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black "><i style="font-size:30px;margin-top: 14px;" class="fa-solid fa-bars"></i></button>
+    <ul id="menu" class="w3-modal" class="w3-modal-content w3-animate-fading" >
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large w3-white w3-animate-fading">x</span>
+      <li><a href="index.html" ><i class="fa-solid fa-house"></i>HOME</a></li>       
+      <li><a href="mainpage1.html" ><i class="fa-solid fa-angles-right"></i>MORE</a></li>
+      <li><a href="about.html" ><i class="fa-solid fa-address-card"></i>ABOUT</a></li>
+      <li><a href="blog.html" ><i class="fa-solid fa-blog"></i>BLOG</a></li>
+      </ul>
+     
+        <label for="name">
+          <input  type="text" id="text" onkeyup="myFunction()" 
+          placeholder="Search for people,places.." title="Type in a name"> 
+  </label>
+    
+  
+</nav>
+<div class="contain234">
+  <div  id="insider">
+     <p>
+      <img  style="width:100% ;height:22em;" src="page/wp2825437-party-desktop-wallpaper.JPG">
+<a href="page/wp2825437-party-desktop-wallpaper.JPG" download class="download-btn">PEOPLE<i class="fa-solid fa-grip"></i></i></a>
+
+
+<p>
+  <img style="width: 100%;height:20em;" src="page/download.jfif">
+<a href="page/download.jfif" download class="download-btn">FACES
+  <i class="fa-solid fa-grip"></i></a>
+</p>
+
+<P>
+<img  style="width:100%;height:23em;" src="page/img1.JPG">
+<a href="page/img1.JPG" download class="download-btn">NATURE<i class="fa-solid fa-grip"></i></a>
+</P>
+
+<p>
+<img class="imgg"  style="width:100% ;height:24em;" src="page/images.jfif">
+<a href="page/images.jfif" download class="download-btn">FACES(awaits)<i class="fa-solid fa-grip"></i></a>
+</P>
+
+<P>
+<img class="imgg"  style="width:100% ;height:21em;" src="page/3491e2089b8e2fbd0ca922eee6157eee.gif">
+<a href="page/3491e2089b8e2fbd0ca922eee6157eee.gif" download class="download-btn">DARK MATTER<i class="fa-solid fa-grip"></i></a>
+</P>
+
+<p>
+<img class="imgg"  style="width:100% ;height:18em;" src="page/photo-1555952517-2e8e729e0b44.jfif">
+<a href="page/photo-1555952517-2e8e729e0b44.jfif" download class="download-btn">FACES(beauty)<i class="fa-solid fa-grip"></i></a>
+</p>
+ 
+<P>
+  <img  class="imgg" style="width:100% ;height:19em;" src="page/fine.jfif">
+  <a href="page/fine.jfif" download class="download-btn">FACES(oblivious)<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+<p>
+  <img  style="width:100% ;height:18em;" src="page/2633461.webp">
+  
+  <a href="page/2633461.webp" download class="download-btn">FACES<i class="fa-solid fa-grip"></i></a>
+</p>
+  
+  <P>
+  <img  style="width:100%;height:19em;" src="page/photo-1588581282844-4c6eea7bd3d2.jfif">
+  <a href="page/photo-1588581282844-4c6eea7bd3d2.jfif" download class="download-btn">FACES<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+  <p>
+  <img class="imgg"  style="width:100% ;height:24em;" src="page/wp8248927-women-painted-faces-wallpapers.JPG">
+  <a href="page/wp8248927-women-painted-faces-wallpapers.JPG" download class="download-btn">FACES<i class="fa-solid fa-grip"></i>></a>
+</P>
+  
+  <P>
+  <img class="imgg"  style="width:100% ;height:21em;" src="page/wp2891783.JPG">
+  <a href="page/wp2891783.JPG" download class="download-btn">PEOPLE<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+  <p>
+  <img class="imgg"  style="width:100% ;height:18em;" src="page/wp2983651.JPG">
+  <a href="page/wp2983651.JPG" download class="download-btn">EUPHORIA<i class="fa-solid fa-grip"></i></a>
+</p>
+   
+  <P>
+    <img  class="imgg" style="width:100% ;height:19em;" src="page/nice-place-hd-wallpaper.JPG">
+    <a href="page/nice-place-hd-wallpaper.JPG" download class="download-btn">GATES BRIDGE<i class="fa-solid fa-grip"></i></a>
+  
+  </P>
+<P>
+<img  style="width:100% ;height:20em;" src="page/IMG_7269.JPG">
+<a href="page/IMG_7269.JPG" download class="download-btn">DARK<i class="fa-solid fa-grip"></i></a>
+</p>
+  </div>
+  <div  id="insider2">
+    <p>
+        <img class="imgg" style="width: 100%;height:20em;" src="page/original.gif">
+        <a href="page/original.gif" download class="download-btn">SKIES<i class="fa-solid fa-grip"></i></a>
+        </p>
+        
+        <p>
+        <img class="imgg"  style="width:100% ;height:19em;" src="page/ab6a14ef750082209a578b3c335f860d--halloween-office-halloween-ideas.JPG">
+        <a href="page/ab6a14ef750082209a578b3c335f860d--halloween-office-halloween-ideas.JPG" download class="download-btn">VOID<i class="fa-solid fa-grip"></i></a>
+      </p>
+        
+        <P>
+        <img class="imgg"  style="width:100%;height:20em;" src="page/wp6554102-colorful-women-wallpapers.JPG">
+        <a href="page/wp6554102-colorful-women-wallpapers.JPG" download class="download-btn">FACES(drest)<i class="fa-solid fa-grip"></i></a>
+      </P>
+        
+        <p>
+        <img  class="imgg" style="width:100% ;height:22em;" src="page/loading-38.gif">
+        <a href="page/loading-38.gif" download class="download-btn">IONIC<i class="fa-solid fa-grip"></i></a>
+      </P>
+        
+        <P>
+        <img  class="imgg" style="width:100% ;height:22em;" src="page/8f809a6fe6f24501353cab7afc93db9c--january--silence.JPG">
+        <a href="page/8f809a6fe6f24501353cab7afc93db9c--january--silence.JPG" download class="download-btn">NATIVE ASIAN<i class="fa-solid fa-grip"></i></a>
+      </P>
+        
+        <p>
+        <img style="width:100% ;height:20em;" src="page/images (1).jfif">
+        <a href="page/images (1).jfif" download class="download-btn">PROTEST<i class="fa-solid fa-grip"></i></a>
+      </p>
+        <p>
+          <img style="width:100% ;height:23em;" src="page/547304.jpg">
+          <a href="page/547304.jpg" download class="download-btn">ALONE<i class="fa-solid fa-grip"></i>a>
+        </p>
+          <p>
+            <img  style="width:100% ;height:20em;" src="page/photography-people-eyes-reflection-wallpaper-preview.jpg">
+            <a href="page/photography-people-eyes-reflection-wallpaper-preview.jpg" download class="download-btn">EYES OF THE BEHOLDER<i class="fa-solid fa-grip"></i></a>
+          </p>
+            
+<p>
+  <img  style="width:100% ;height:18em;" src="page/photo-1515900959941-d1cce424f5c4.Jfif">
+  <a href="page/photo-1515900959941-d1cce424f5c4.Jfif" download class="download-btn">HAPPINESS<i class="fa-solid fa-grip"></i></a>
+</p>
+  
+  <P>
+  <img  style="width:100%;height:19em;" src="page/wp1933849.JPG">
+  <a href="page/wp1933849.JPG" download class="download-btn">FAR FROM HOME<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+  <p>
+  <img class="imgg"  style="width:100% ;height:24em;" src="page/wp2983730.JPG">
+  <a href="page/wp2983730.JPG" download class="download-btn">BLUE<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+  <P>
+  <img class="imgg"  style="width:100% ;height:21em;" src="page/wp2983671.JPG">
+  <a href="page/wp2983671.JPG" download class="download-btn">ESCAPE<i class="fa-solid fa-grip"></i></a>
+</P>
+  
+  <p>
+  <img class="imgg"  style="width:100% ;height:18em;" src="page/images (4).jfif">
+  <a href="page/images (4).jfif" download class="download-btn">SHE WAITS<i class="fa-solid fa-grip"></i></a>
+</p>
+   
+  <P>
+    <img  class="imgg" style="width:100% ;height:20em;" src="page/images (2).jfif">
+    <a href="page/images (2).jfif" download class="download-btn">A WALK FOREVER<i class="fa-solid fa-grip"></i></a>
+  </P>
+  </div>
+</div>
+</div>
+<script src="./main.js"></script>
+
+</body>
+
+
+</html>

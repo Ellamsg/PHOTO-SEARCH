@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://kit.fontawesome.com/3b9e2cc044.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Bebas+Neue&family=Monoton&family=Roboto:wght@100&display=swap" rel="stylesheet">
+<style>
+
+
+.container1{
+    display:grid;
+    height:100%;
+    grid-template-columns:1fr;
+    grid-template-rows: 0.2fr 4.5fr 6.2fr;
+    grid-template-areas:"nav"
+                        "contain1" 
+                        "contain1" 
+                        "contain1";
+
+}
+#preloader{
+    background:white url('page/1_CsJ05WEGfunYMLGfsT2sXA.gif') no-repeat center;
+    height: 100vh;
+    width: 100%;
+    position:fixed;
+    z-index:100;
+    background-size: 60%;
+}
+
+nav{
+    background-color: rgb(0, 0, 0);
+    grid-area: nav;
+    text-align:left;
+    word-spacing:5px;
+  height:5em;
+  padding-left: 20px;
+  border-bottom: 1px solid green;
+  
+   
+}
+.contain1{
+    display: grid;
+    background-image: url(" page/bb44c4bd51708426bbc80441900fe1b9.jpg");
+    grid-area: contain1;
+    position:center;
+    overflow-y: scroll;
+    gap:0.7em; 
+    text-align: center;
+    align-items: center;
+    background-size: fill;
+    color: rgb(255, 253, 253);
+     animation-name: glow;
+     animation-duration: 7s;
+    font-size: larger;
+    
+}
+@keyframes glow {
+
+
+  0%{background-image:url("page/a02c7c585dade4842ebe8909f1f7b82d--graphic-wallpaper-black-wallpaper.jpg");}
+25%{background-image:url("page/wp8248927-women-painted-faces-wallpapers.1.jpg");}
+50%{background-image:url(" page/8f1115f1961d3d844ec39d9d528a6bc1--african-tribal-makeup-african-jewelry.jpg");}
+
+} 
+#menu{
+ text-align: center;
+ background-color:black;
+}
+
+@media only screen and (max-width:550px){
+  
+.contain1{
+    display: grid;
+   background-image: url("page/bb44c4bd51708426bbc80441900fe1b9.jpg");
+    grid-area: contain1;
+    position:center;
+    overflow-y: scroll;
+    gap:0.7em; 
+    text-align: center;
+    background-size: cover;
+    animation-name:glow;
+    animation-duration: 8s;
+    padding-top: 8px;
+    color: white;
+    padding-left: 29%;
+ 
+}
+@keyframes glow {
+ 
+
+
+0%{background-image:url("page/a02c7c585dade4842ebe8909f1f7b82d--graphic-wallpaper-black-wallpaper.jpg");}
+25%{background-image:url("page/8f1115f1961d3d844ec39d9d528a6bc1--african-tribal-makeup-african-jewelry.jpg");}
+50%{background-image:url(" page/wp8248927-women-painted-faces-wallpapers.1.jpg");}
+
+} 
+
+}
+
+</style>
+</head>
+
+<body>
+  <div id="preloader">  </div>
+<div class="container1">
+<nav>
+  <button  onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black w3-animate-fading"><i style="font-size:30px;" class="fa-solid fa-bars"></i></button>
+    <ul id="menu" class="w3-modal" class="w3-modal-content w3-animate-fading" >
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large w3-white w3-animate-fading">x</span>
+      <li><a href="index.html" ><i class="fa-solid fa-house"></i>HOME</a></li>       
+      <li><a href="mainpage1.html" ><i class="fa-solid fa-angles-right"></i>MORE</a></li>
+      <li><a href="about.html" ><i class="fa-solid fa-address-card"></i>ABOUT</a></li>
+      <li><a href="blog.html" ><i class="fa-solid fa-blog"></i>BLOG</a></li>
+      </ul>
+    
+</nav>
+<div class="contain1">
+   
+        <p style="font-family: 'Bebas Neue', cursive;">
+          <img style="width:150px;height:150px; border-radius: 65px;"   src="page/wp2825437-party-desktop-wallpaper.JPG"><br/>
+         <font style="color: red;"> Photography </font> is the art of capturing light with a camera, usually via a digital sensor or film, to create an image. <font style="color: rgb(0, 255, 42);"> With the right camera equipment, you can even photograph wavelengths of light invisible to the human eye, including UV, infrared, and radio.</font>
+
+       The first permanent photograph was captured in 1826  <font style="color: red;">(some sources say 1827)</font> by Joseph Nicéphore Niépce in France. It shows the roof of a building lit by the sun. 
+
+      </p>
+
+
+</div>
+
+</div>
+<script src="./main.js"></script>
+
+</body>
+
+
+</html>
